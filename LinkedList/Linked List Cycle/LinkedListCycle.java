@@ -53,7 +53,7 @@ public class LinkedListCycle {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     Solution solution = new Solution();
-    AddTwoLinkedList adder = new AddTwoLinkedList();
+    LinkedListCycle adder = new LinkedListCycle();
     int tc = scanner.nextInt();
     while (tc-- > 0) {
       String[] l1Input = scanner.next().split(",");
