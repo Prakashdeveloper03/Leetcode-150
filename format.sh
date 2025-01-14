@@ -12,6 +12,17 @@ else
   fi
 fi
 
+# Format Go files
+echo -e "\nFormatting Go files..."
+find . -type f -name "*.go" | while read -r file; do
+  echo "Formatting $file..."
+  gofmt -w "$file"
+  if [ $? -ne 0 ]; then
+    echo "Error: Failed to format $file."
+    exit 1
+  fi
+done
+
 # Format Java files
 echo -e "\nFormatting Java files..."
 find . -type f -name "*.java" | while read -r file; do
